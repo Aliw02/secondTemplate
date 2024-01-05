@@ -86,14 +86,15 @@ ul{
     width: 550px;
     margin: 0 auto 100px;
     color: var(--secondary-color);
+    text-align: center;
 }
 
 @media (max-width: 767px){
     .main-heading p{
         display: flex;
-        width: 100%;
+        width: 75%;
         flex-wrap: wrap;
-        /* text-align: center; */
+        text-align: center;
     }
 }
 /*^ END COMPONENT */
@@ -310,7 +311,7 @@ header nav .form {
         margin-bottom: 40px;
     }
     .services .srv-box i {
-        margin: 10px 0 30px;
+        margin: 10px 50px 30px;
     }
 }
 .services .srv-box i{
@@ -324,5 +325,82 @@ header nav .form {
 .services .srv-box p{
     line-height: 2;
     color: var(--secondary-color);
+    
 }
 /** END SERVICES */
+
+/*? START DESIGN SECTION */
+.design {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    height: 600px;
+    position: relative;
+    background: url(../images/design-section_background.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.design::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 0 0/ 60%);
+}
+.design .image,
+.design .text {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+.design .image {
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .design .image {
+        display: none;
+    }
+}
+.design .image img {
+    position: relative;
+    bottom: -200px;
+    height: 500px;
+}
+.design .text {
+    color: white;
+    padding: 50px;
+    background-color: var(--transparent-color);
+}
+.design .text h2{
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.design .text ul li {
+    padding: 15px 0;
+}
+
+@media (min-width:187.5px) and (max-width:998px) {
+    .design .text ul li {
+        display: flex;
+        flex: 1;
+    }
+}
+
+.design .text ul li::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f108";
+    font-weight: 900;
+    margin-right: 20px;
+    position: relative;
+    top: 1px;
+}
+
+/*? END DESIGN SECTION */
